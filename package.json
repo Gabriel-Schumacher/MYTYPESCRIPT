@@ -4,19 +4,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compileTS": "npx tsc -w",
-    "compileTailWind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify --watch",
-    "server": "lite-server",
-    "dev": "npm-run-all --parallel --race compileTS compileTailWind server"
+    "watchTailWind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "serveVite": "vite --port 3000",
+    "dev": "npm-run-all --parallel --race watchTailWind serveVite"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "lite-server": "^2.6.1",
     "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "vite": "^4.1.1"
   },
   "dependencies": {
     "daisyui": "^2.50.0"
