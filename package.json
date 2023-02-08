@@ -5,8 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watchTailWind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "buildTailWind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "serveVite": "vite --port 3000",
-    "dev": "npm-run-all --parallel --race watchTailWind serveVite"
+    "dev": "npm-run-all --parallel --race watchTailWind serveVite",
+    "build": "npx tsc && vite build && npm run buildTailWind"
   },
   "author": "",
   "license": "ISC",

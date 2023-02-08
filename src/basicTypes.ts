@@ -44,3 +44,23 @@ const sportsCar: {
   driver: [1, "McLaren"],
   role: Role.ADMIN
 };
+
+const storageHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dist/output.css"/>
+    <script src="/src/index.ts" type="module" defer></script>
+</head>
+<body>
+    <h1 class="text-3xl font-bold underline text-center text-red-800" > Welcome to my typescript page</h1>
+    <h2 class="text-blue-600">This is where I show off my Typescript skills</h2>
+ <div id="counterDiv"></div>
+    
+</body>
+
+</html>`
