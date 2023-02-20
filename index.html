@@ -21,22 +21,30 @@
     <main class="flex h-full">
     <nav class="w-72 mx-8">
         <ul>
-            <li>
-                    <button id="funcParams" class="btn btn-primary w-full">Function Parameter Types</button> 
+            <li class="my-8 flex justify-center">
+                <button id="funcParams" class="btn btn-primary w-full">Function Parameter Types</button> 
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="objectTypes" class="btn btn-primary">Object Types</button>
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="funcReturnTypes" class="btn btn-primary">Function Return Types</button>
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="funcAsType" class="btn btn-primary">Functions As Types</button>
             </li>
         </ul>
     </nav>
-    <div class="ml-8 w-screen">
-        <div id="codeExample" class="card">
+    <div id="code-example" class="ml-8 w-screen">
+        <div id="code-card" class="card">
             <div class="card-body">
                 <h2 class="card-title"></h2>
-                <div id="cardContent"><!-- CODE EXAMPLE HERE --></div>
+                <p id="card-content"></p>
+                <div id="code-content" class="mockup-code">
+                    <!-- Here is where the preform code goes-->
+                </div>
             </div>
-
         </div>
-
-
-
     </div>
     <main>
 </body>

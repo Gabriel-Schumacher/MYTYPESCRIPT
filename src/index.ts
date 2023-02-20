@@ -1,8 +1,9 @@
-//import { setupCounter } from "./counter"
+const funcParamsButton = document.querySelector('#funcParams')!
+const objectTypesButton = document.querySelector('#objectTypes')!
+const codeExample = document.querySelector('#code-example')!
+const cardTitle = document.querySelector('.card-title')!
+const cardContent = document.querySelector('#card-content')!
+const codeContent = document.querySelector('#code-content')!
 
-//document.querySelector('#counterDiv')!.innerHTML = `
-//<a class="text-3xl" href="https://www.uvu.edu" target="_blank">Go to UVU!</a>`
-
-export function logSomething() {
-    console.log('Main index.ts reporting for duty!')
-}
+//funcParamsButton?.addEventListener('click', showExample1)
+//objectTypesButton.addEventListener('click', showExample2)

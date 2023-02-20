@@ -1,16 +1,13 @@
+export const fucntionParamsExample = () => {
 
+    return {
+      title: `Data types can be set on function parameters`,
+      explaination: `This is the syntax when indicating the data type of a function parameter. After the parameter name add a colon (:), a space and then the data type you expect. Be sure to use the primitive data types! (e.g. 'number' instead of 'Number')`,
+      code: `<pre data-prefix="1"><code>function add(num1; number, num2: number) {</code></pre>
 
-const funcParamsButton = document.querySelector('#funcParams')!
-const codeExample = document.querySelector('#codeExample')!
-const cardTitle = document.querySelector('.card-title')!
-const cardContent = document.querySelector('#cardContent')!
+        <predata-prefix="2"><code>  return num1 + num2</code></pre> <pre data-prefix="3"><code>}</code></pre>`
+    }
 
-funcParamsButton?.addEventListener('click', showExample)
-
-function showExample() {
-    console.log('About to show example...')
-    cardTitle.textContent= 'function add(num1: number, num2: number)'
-    cardContent.innerHTML = `<p>some code goes here</p>`
 }
 
 // a parameter is a variable passed into a function
