@@ -2,13 +2,21 @@ export const functionParamsExample = () => {
 
     return {
       title: `Data types can be set on function parameters`,
-      explaination: `This is the syntax when indicating the data type of a function parameter. After the parameter name add a colon (:), a space and then the data type you expect. Be sure to use the primitive data types! (e.g. 'number' instead of 'Number')`,
+      explanation: `This is the syntax when indicating the data type of a function parameter. After the parameter name add a colon (:), a space and then the data type you expect. Be sure to use the primitive data types! (e.g. 'number' instead of 'Number')`,
       code: `<pre data-prefix="1"><code>function add(num1; number, num2: number) {</code></pre>
 
         <pre data-prefix="2"><code>  return num1 + num2</code></pre> 
         <pre data-prefix="3"><code>}</code></pre>`
     }
 
+}
+
+export const objectTypesExample = () => {
+  return {
+    title: ``,
+    explanation: ``,
+    code:``
+  }
 }
 
 // a parameter is a variable passed into a function
