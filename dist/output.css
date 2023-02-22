@@ -2302,6 +2302,10 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .m-8 {
   margin: 2rem;
 }
