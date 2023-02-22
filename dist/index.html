@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,59 @@
 
     
     
-  <script type="module" crossorigin src="/assets/index-b79d4ef2.js"></script>
-  <link rel="stylesheet" href="/assets/index-511d568b.css">
-</head>
-<body>
-    <h1 class="text-3xl font-bold underline text-center text-red-800" > Welcome to my typescript page</h1>
-    <h2 class="text-blue-600">This is where I show off my Typescript skills</h2>
- <div id="counterDiv"></div>
     
+
+  <script type="module" crossorigin src="/assets/index-aa41fa1b.js"></script>
+  <link rel="stylesheet" href="/assets/index-633abf18.css">
+</head>
+
+
+
+<body>
+
+    <header class="m-8 text-5xl border-b-4 border-primary">Basic Typescript</header>
+
+    <main class="flex h-full">
+    <nav class="w-72 mx-8">
+        <ul>
+            <li class="my-8 flex justify-center">
+                <button id="funcParams" class="btn btn-primary w-full">Function Parameter Types</button> 
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="objectTypes" class="btn btn-primary">Object Types</button>
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="funcReturnTypes" class="btn btn-primary">Function Return Types</button>
+            </li>
+            <li class="my-8 flex justify-center">
+                <button id="funcAsType" class="btn btn-primary">Functions As Types</button>
+            </li>
+
+            <li class="my-8 flex justify-center">
+                <button id="ArrayTupleEnum" class="btn btn-primary">Array, Tuple and Enum Types</button>
+            </li>
+
+            <li class="my-8 flex justify-center">
+                <button id="UnionLiteral" class="btn btn-primary">Union and Literal Types</button>
+            </li>
+
+            <li class="my-8 flex justify-center">
+                <button id="funcType" class="btn btn-primary">Function Types</button>
+            </li>
+        </ul>
+    </nav>
+    <div id="code-example" class="ml-8 w-screen">
+        <div id="code-card" class="card">
+            <div class="card-body">
+                <h2 class="card-title"></h2>
+                <p id="card-content"></p>
+                <div id="code-content" class="mockup-code">
+                    <!-- Here is where the preform code goes-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
 </body>
 
 </html>

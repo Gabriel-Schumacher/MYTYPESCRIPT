@@ -2,4 +2,4 @@ function printResult(num: number) {
     console.log('Result' + num)
 }
 
-printResult(add(5, 12))
+//printResult(add(5, 12))

@@ -208,6 +208,10 @@ function add2(n1: number, n2: number) {
 function add3(n1: number, n2: number): number {
   return n1 + n2
 }
+
+console.log(add1)
+console.log(add2)
+console.log(add3)
 // Example of Function As Types
 //Types that describe a function, regarding the parameters and value of the function.
 //A function type is create with arrow notion () => with the return type specified after. Inside the function you add parameters for the types used.
@@ -256,6 +260,9 @@ const person3 = {
   role: Role.ADMIN
 }
 
+console.log(person1)
+console.log(person2)
+console.log(person3)
 // Example of Union Types
 
 function combine(input1: number | string, input2: number | string) {
@@ -298,3 +305,5 @@ console.log(combine2('25', '3.5', 'as-text'))
 function addAndHandle(n1: number, n2: number): number {
   return n1 + n2
 }
+
+console.log(addAndHandle)
