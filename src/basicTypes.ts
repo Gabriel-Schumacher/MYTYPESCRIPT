@@ -6,7 +6,7 @@ export const functionParamsExample = () => {
       code: `<pre data-prefix="1"><code>function add(num1; number, num2: number) {</code></pre>
 
         <pre data-prefix="2"><code>  return num1 + num2</code></pre> 
-        <pre data-prefix="3"><code></code></pre>`
+        <pre data-prefix="3"><code>}</code></pre>`
     }
 
 }
@@ -39,18 +39,104 @@ export const objectTypesExample = () => {
   }
 }
 
-// a parameter is a variable passed into a function
-function add(num1: number, num2: number) {
-  return num1 + num2;
+export const functionReturnTypesExample = () => {
+  return {
+    title: `Typescript will infer types`,
+    explanation: `This function has the return type, which can be inferred by typescript. The value of the return type can be assigned by adding a colon (:) and the type after.`,
+    code:`<pre data-prefix="1">Infer the return type</code></pre>
+    <pre data-prefix="1">function add1(n1: number, n2: number) {</code></pre>
+    <pre data-prefix="1">  return n1 + n2</code></pre>
+    <pre data-prefix="1">}</code></pre>
+    <pre data-prefix="1"><code> <!--Space--> </code></pre>
+    <pre data-prefix="1">function add2(n1: number, n2: number) {</code></pre>
+    <pre data-prefix="1">  return n1.toString() + n2.toString()</code></pre>
+    <pre data-prefix="1">}</code></pre>
+    <pre data-prefix="1"><code> <!--Space--> </code></pre>
+    <pre data-prefix="1"><code>//Assign the return type </code></pre>
+    <pre data-prefix="1">function add1(n1: number, n2: number): number {</code></pre>
+    <pre data-prefix="1">  return n1 + n2</code></pre>
+    <pre data-prefix="1">}</code></pre>`
+
+  }
 }
 
-const numberOne = 29;
-const numberTwo = 3.5;
+export const functionAsTypesExample = () => {
+  return {
+    title: `functionAsTypesExample`,
+    explanation: `TypeScript can infer the data type of an object if all properties are set, but this example shows how to explicitly set the types of each property.`,
+    code:`<pre data-prefix="1"><code> console.log(2) </code></pre>`
+
+  }
+}
+
+export const arrayTupleEnumExample = () => {
+  return {
+    title: `arrayTupleEnumExample`,
+    explanation: `TypeScript can infer the data type of an object if all properties are set, but this example shows how to explicitly set the types of each property.`,
+    code:`<pre data-prefix="1"><code> console.log(3) </code></pre>`
+
+  }
+}
+
+export const unionLiteralExample = () => {
+  return {
+    title: `Values with more than a single type`,
+    explanation: `A union type describes a value that can be one of several types. We use the pipe ( | ) to separate each type, so number | string | boolean is the type of a value that can be a number , a string , or a boolean.  By using literal types you can allow an exact value which a string, number, or boolean must have.`,
+    code:`<pre data-prefix="1"><code>//Union Type</code></pre>
+          <pre data-prefix="2"><code>function combine(input1: number | string, input2: number | string) { </code></pre>
+          <pre data-prefix="3"><code> let result </code></pre>
+          <pre data-prefix="4"><code> if (typeof input1 === 'number' && typeof input2 === 'number') { </code></pre>
+          <pre data-prefix="5"><code>    result = input1 + input2 </code></pre>
+          <pre data-prefix="6"><code> } else { </code></pre>
+          <pre data-prefix="7"><code>    result = input1.toString() + input2.toString()</code></pre>
+          <pre data-prefix="8"><code> } </code></pre>
+          <pre data-prefix="9"><code> return result</code></pre>
+          <pre data-prefix="10"><code>} </code></pre>
+
+          <pre data-prefix="11"><code> </code></pre>
+          <pre data-prefix="12"><code>//Literal Type</code></pre>
+          <pre data-prefix="13"><code>function combine2(input1: number | string,</code></pre>
+          <pre data-prefix="14"><code>   input2: number | string, resultConversion: 'as-number' | 'as-text') {</code></pre>
+          <pre data-prefix="15"><code>  let result</code></pre>
+          <pre data-prefix="16"><code>  if (typeof input1 === 'number' && typeof input2 === 'number' ||</code></pre>
+          <pre data-prefix="17"><code>  resultConversion === 'as-number') {</code></pre>
+          <pre data-prefix="18"><code>    result = +input1 + +input2</code></pre>
+          <pre data-prefix="19"><code>  } else {</code></pre>
+          <pre data-prefix="20"><code>    result = input1.toString() + input2.toString()</code></pre>
+          <pre data-prefix="21"><code>  }</code></pre>
+          <pre data-prefix="22"><code>  return result</code></pre>
+          <pre data-prefix="23"><code>}</code></pre>`
+          
+  }
+}
+
+export const functionTypesExample = () => {
+  return {
+    title: `functionTypesExample`,
+    explanation: `TypeScript can infer the data type of an object if all properties are set, but this example shows how to explicitly set the types of each property.`,
+    code:`<pre data-prefix="1"><code>//Example Function</code></pre>
+          <pre data-prefix="2"><code>function add(num1: number, num2: number) {</code></pre>
+          <pre data-prefix="3"><code>   return num1 + num2;</code></pre>
+          <pre data-prefix="4"><code>}</code></pre>
+          
+          <pre data-prefix="5"><code>//Function as Type:</code></pre>
+          <pre data-prefix="6"><code>let combineValues: (a:number, b:number) => number</code></pre>
+          
+          <pre data-prefix="7"><code>combineValues = add</code></pre>
+          <pre data-prefix="8"><code>console.log(combineValues(8, 8))</code></pre>`
+  }
+}
+
+// a parameter is a variable passed into a function
+
+
+//const numberOne = 29;
+//const numberTwo = 3.5;
 
 // an argument i sa value (primitive or object) passed as an input
 
-let result = add(numberOne, numberTwo);
-console.log(result);
+//let result = add(numberOne, numberTwo);
+//console.log(result);
 
 enum Role {ADMIN, DEV, STUDENT}
 
@@ -73,4 +159,69 @@ const sportsCar: {
   driver: [1, "McLaren"],
   role: Role.ADMIN
 };
+
+console.log(sportsCar)
+
+// Example of Function Return Types
+
+function add1(n1: number, n2: number) {
+  return n1 + n2
+}
+
+function add2(n1: number, n2: number) {
+  return n1.toString() + n2.toString()
+}
+
+function add3(n1: number, n2: number): number {
+  return n1 + n2
+}
+// Example of Function As Types
+//Types that describe a function, regarding the parameters and value of the function.
+//A function type is create with arrow notion () => with the return type specified after. Inside the function you add parameters for the types used.
+
+//Example Function
+function add(num1: number, num2: number) {
+  return num1 + num2;
+}
+
+//Function as Type:
+let combineValues: (a:number, b:number) => number
+
+combineValues = add
+console.log(combineValues(8, 8))
+
+// Example of Union Types
+
+function combine(input1: number | string, input2: number | string) {
+  let result
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2
+  } else {
+    result = input1.toString() + input2.toString()
+  }
+  return result
+}
+
+const combinedAges = combine(30, 26)
+console.log(combinedAges)
+
+const combinedNames = combine('Gabriel', 'Schumacher')
+console.log(combinedNames)
+
+// Example of typescript literal types
+
+function combine2(input1: number | string, input2: number | string, resultConversion: 'as-number' | 'as-text') {
+  let result
+  if (typeof input1 === 'number' && typeof input2 === 'number' ||
+  resultConversion === 'as-number') {
+    result = +input1 + +input2
+  } else {
+    result = input1.toString() + input2.toString()
+  }
+  return result
+}
+
+console.log(combine2(25, 3.5, 'as-number'))
+console.log(combine2('25', '3.5', 'as-number'))
+console.log(combine2('25', '3.5', 'as-text'))
 
