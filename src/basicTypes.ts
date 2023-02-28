@@ -39,6 +39,8 @@ export const objectTypesExample = () => {
   }
 }
 
+//console.log(JSON.stringify(functionParamsExample()), JSON.stringify(objectTypesExample()) )
+
 export const functionReturnTypesExample = () => {
   return {
     title: `Typescript will infer types`,
