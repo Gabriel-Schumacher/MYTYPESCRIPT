@@ -84,38 +84,68 @@ const getCurrentSnippet = (block: string) => {
     }
 }
 
-const updatePosition = block:string
+const updatePosition = (direction: string) => {
+    if (currentBlock === 'Basic CSS') {
+      if (direction === 'next') {
+        if (cssPosition < basicCssSnippets.length - 1) {
+          cssPosition++
+        }
+      } else {
+        if (cssPosition > 0) {
+          cssPosition--
+        }
+      }
+    }
+    if (currentBlock === 'Basic HTML and HTML5') {
+      if (direction === 'next') {
+        if (htmlPosition < basicHTMLSnippets.length - 1) {
+          htmlPosition++
+        }
+      } else {
+        if (htmlPosition > 0) {
+          htmlPosition--
+        }
+      }
+    }
+    if (currentBlock === 'CSS Flexbox') {
+      if (direction === 'next') {
+        if (flexboxPosition < flexboxSnippets.length - 1) {
+          flexboxPosition++
+        }
+      } else {
+        if (flexboxPosition > 0) {
+          flexboxPosition--
+        }
+      }
+    }
+    if (currentBlock === 'CSS Grid') {
+      if (direction === 'next') {
+        if (gridPosition < gridSnippets.length - 1) {
+          gridPosition++
+        }
+      } else {
+        if (gridPosition > 0) {
+          gridPosition--
+        }
+      }
+    }
+  }
+
 
 nextButton.addEventListener('click', () => {
+    updatePosition('next')
     const snippet = getCurrentSnippet(currentBlock)
-    snippet?.display(videoFrame)
-
+    if(snippet) {
+        snippet.display(videoFrame)
+        challengeVidBtn.textContent = snippet.title
+    }
 })
 
 prevButton.addEventListener('click', () => {
-    let snippet: CodeSnippet = new CodeSnippet ('', '', '', '')
-
-if (currentBlock === 'Basic CSS') {
-   snippet = basicCssSnippets[cssPosition]
-   cssPosition <= basicCssSnippets.length ? cssPosition++ : cssPosition = 0
-}
-if (currentBlock === 'Basic HTML and HTML5') {
-    snippet = basicHTMLSnippets[htmlPosition]
-    htmlPosition <= basicHTMLSnippets.length ? htmlPosition++ : htmlPosition = 0
-}
-
- if (currentBlock === 'CSS Flexbox') {
-    snippet = flexboxSnippets[flexboxPosition]
-    flexboxPosition <= flexboxSnippets.length ? flexboxPosition++ : flexboxPosition = 0
-}
-
- if (currentBlock === 'CSS Grid') {
-    snippet = gridSnippets[gridPosition]
-    gridPosition <= gridSnippets.length ? gridPosition++ : gridPosition = 0
-}
-
- if (snippet.videoUrl && snippet.title) {
-    snippet.display(videoFrame)
-    challengeVidBtn.textContent = snippet.title
- }
+    updatePosition('prev')
+    const snippet = getCurrentSnippet(currentBlock)
+    if(snippet) {
+        snippet.display(videoFrame)
+        challengeVidBtn.textContent = snippet.title
+    }
 })
