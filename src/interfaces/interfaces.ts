@@ -60,6 +60,11 @@ const populateMenu = (arrayOfBlocks: any[]) => {
             })
             menuLink.classList.add('active')
             currentBlock = block?.meta?.name
+            const snippet = getCurrentSnippet(currentBlock)
+            if (snippet) {
+                snippet.display(videoFrame)
+                challengeVidBtn.textContent = snippet.title
+            }
         })
 
         menuItem.appendChild(menuLink)
@@ -70,7 +75,7 @@ const populateMenu = (arrayOfBlocks: any[]) => {
 populateMenu(blocksArray)
 
 const getCurrentSnippet = (block: string) => {
-    if (block === 'Basic Css') {
+    if (block === 'Basic CSS') {
         return basicCssSnippets[cssPosition]
     }
     else if (block === 'Basic HTML and HTML5') {
