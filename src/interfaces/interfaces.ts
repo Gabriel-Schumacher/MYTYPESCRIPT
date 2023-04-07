@@ -69,30 +69,53 @@ const populateMenu = (arrayOfBlocks: any[]) => {
 
 populateMenu(blocksArray)
 
+const getCurrentSnippet = (block: string) => {
+    if (block === 'Basic Css') {
+        return basicCssSnippets[cssPosition]
+    }
+    if (block === 'Basic HTML and HTML5') {
+        return basicHTMLSnippets[htmlPosition]
+    }
+    if (block === 'CSS Flexbox') {
+        return flexboxSnippets[flexboxPosition]
+    }
+    if (block === 'CSS Grid') {
+        return gridSnippets[gridPosition]
+    }
+}
+
+const updatePosition = block:string
+
 nextButton.addEventListener('click', () => {
-        let snippet: CodeSnippet = new CodeSnippet ('', '', '', '')
+    const snippet = getCurrentSnippet(currentBlock)
+    snippet?.display(videoFrame)
 
-    if (currentBlock === 'Basic CSS') {
-       snippet = basicCssSnippets[cssPosition]
-       cssPosition <= basicCssSnippets.length ? cssPosition++ : cssPosition = 0
-    }
-    if (currentBlock === 'Basic HTML and HTML5') {
-        snippet = basicHTMLSnippets[htmlPosition]
-        htmlPosition <= basicHTMLSnippets.length ? htmlPosition++ : htmlPosition = 0
-    }
+})
 
-     if (currentBlock === 'CSS Flexbox') {
-        snippet = flexboxSnippets[flexboxPosition]
-        flexboxPosition <= flexboxSnippets.length ? flexboxPosition++ : flexboxPosition = 0
-    }
+prevButton.addEventListener('click', () => {
+    let snippet: CodeSnippet = new CodeSnippet ('', '', '', '')
 
-     if (currentBlock === 'CSS Grid') {
-        snippet = gridSnippets[gridPosition]
-        gridPosition <= gridSnippets.length ? gridPosition++ : gridPosition = 0
-    }
+if (currentBlock === 'Basic CSS') {
+   snippet = basicCssSnippets[cssPosition]
+   cssPosition <= basicCssSnippets.length ? cssPosition++ : cssPosition = 0
+}
+if (currentBlock === 'Basic HTML and HTML5') {
+    snippet = basicHTMLSnippets[htmlPosition]
+    htmlPosition <= basicHTMLSnippets.length ? htmlPosition++ : htmlPosition = 0
+}
 
-     if (snippet.videoUrl && snippet.title) {
-        snippet.display(videoFrame)
-        challengeVidBtn.textContent = snippet.title
-     }
+ if (currentBlock === 'CSS Flexbox') {
+    snippet = flexboxSnippets[flexboxPosition]
+    flexboxPosition <= flexboxSnippets.length ? flexboxPosition++ : flexboxPosition = 0
+}
+
+ if (currentBlock === 'CSS Grid') {
+    snippet = gridSnippets[gridPosition]
+    gridPosition <= gridSnippets.length ? gridPosition++ : gridPosition = 0
+}
+
+ if (snippet.videoUrl && snippet.title) {
+    snippet.display(videoFrame)
+    challengeVidBtn.textContent = snippet.title
+ }
 })
