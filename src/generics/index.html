@@ -14,16 +14,16 @@
 </head>
 <body>
     <main class="bg-gray-500 w-screen h-screen flex flex-col justify-center">
-        <h1 class="text-4xl text-center p-4 bg-slate-300">Examples of Generic Types</h1>
-        <div class="container mx-auto">
-        <div class="laptop bg-slate-400 mx-16">
-        <div class="laptop-screen flex">
-            <div class="description bg-white-700 w-1/2 h-[750px]">
-                <p>Here's where the description belongs</p>
-            </div>
-
-            <div class="code-sample bg-gray-800 w-1/2 h-[750px]">
-                <pre><code>
+        <h1 class="text-4xl bg-slate-300 text-center p-4">Examples of Generic Types</h1>
+        <div class="container mx-16 mt-6">
+        <div class="laptop bg-slate-400 mx-16 min-h-[800px] min-w-[1100px] rounded-tr-3xl rounded-tl-3xl border-2">
+            <div class="laptop-screen flex">
+                <div class="description bg-white w-1/2 mt-6 ml-6 h-[750px] p-4">
+                    <p>Here's where the description belongs</p>
+                </div>
+                <div class="code-sample bg-gray-800 w-1/2 mt-6 mr-6 h-[750px]">
+                    <pre>
+                        <code>
 function reverse<T>(array: T[]): T[] {
     return array.reverse()
 }
@@ -35,11 +35,12 @@ console.log(reversedStringArray)
 const numberArray = [1342, 2664, 34236]
 const reversedNumberArray = reverse<number>(numberArray)
 console.log(reversedNumberArray)
-                </code></pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
         </div>
-        </div>
-        <div class="keyboard h-16 bg-white rounded-bl-3xl rounded-br-3xl">
+        <div class="keyboard h-16 bg-white rounded-bl-3xl rounded-br-3xl mx-2">
 
         </div>
     </div>
