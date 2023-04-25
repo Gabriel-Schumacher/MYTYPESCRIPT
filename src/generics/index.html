@@ -5,29 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/androidstudio.min.css">
     <script src="generics.ts" defer></script>
     <link rel="stylesheet" href="../input.css">
 
     <title>Generics</title>
+
 </head>
 <body>
-    <main class="bg-gray-500 w-full h-screen">
-        <h1 class="text-4xl">Examples of Generic Types</h1>
-
-        <div class="laptop w-[1024px] bg-slate-400 h-[760px] m-8">
+    <main class="bg-gray-500 w-screen h-screen flex flex-col justify-center">
+        <h1 class="text-4xl text-center p-4 bg-slate-300">Examples of Generic Types</h1>
+        <div class="container mx-auto">
+        <div class="laptop bg-slate-400 mx-16">
         <div class="laptop-screen flex">
-            <div class="description bg-white w-1/2 h-full">
+            <div class="description bg-white-700 w-1/2 h-[750px]">
                 <p>Here's where the description belongs</p>
             </div>
 
-            <div class="code-sample bg-gray-800 w-1/2 h-full"></div>
-        </div>
+            <div class="code-sample bg-gray-800 w-1/2 h-[750px]">
+                <pre><code>
+function reverse<T>(array: T[]): T[] {
+    return array.reverse()
+}
 
-        <div class="keyboard">
+const stringArray = ['Key Lime', 'cherry', 'lemon']
+const reversedStringArray = reverse<string>(stringArray)
+console.log(reversedStringArray)
+
+const numberArray = [1342, 2664, 34236]
+const reversedNumberArray = reverse<number>(numberArray)
+console.log(reversedNumberArray)
+                </code></pre>
+            </div>
+        </div>
+        </div>
+        <div class="keyboard h-16 bg-white rounded-bl-3xl rounded-br-3xl">
 
         </div>
-        </div>
+    </div>
     </main>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
