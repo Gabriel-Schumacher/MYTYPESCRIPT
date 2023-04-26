@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/androidstudio.min.css">
-    <script src="generics.ts" defer></script>
+    <script src="generics.ts" type="module" defer></script>
     <link rel="stylesheet" href="../input.css">
 
     <title>Generics</title>
@@ -19,23 +19,11 @@
         <div class="laptop bg-slate-400 mx-16 min-h-[800px] min-w-[1100px] rounded-tr-3xl rounded-tl-3xl border-2">
             <div class="laptop-screen flex">
                 <div class="description bg-white w-1/2 mt-6 ml-6 h-[750px] p-4">
-                    <p>Here's where the description belongs</p>
+                    <p class="text-xl">Here's where the description belongs</p>
                 </div>
                 <div class="code-sample bg-gray-800 w-1/2 mt-6 mr-6 h-[750px]">
-                    <pre>
-                        <code>
-function reverse<T>(array: T[]): T[] {
-    return array.reverse()
-}
+                    <pre class="text-xl">
 
-const stringArray = ['Key Lime', 'cherry', 'lemon']
-const reversedStringArray = reverse<string>(stringArray)
-console.log(reversedStringArray)
-
-const numberArray = [1342, 2664, 34236]
-const reversedNumberArray = reverse<number>(numberArray)
-console.log(reversedNumberArray)
-                        </code>
                     </pre>
                 </div>
             </div>
@@ -45,7 +33,6 @@ console.log(reversedNumberArray)
         </div>
     </div>
     </main>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+
 </body>
 </html>
