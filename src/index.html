@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Basic Typescript</title>
 
     <link rel="stylesheet" href="input.css"/>
     <script src="index.ts" type="module" defer></script>
@@ -16,38 +16,48 @@
 
 <body>
 
-    <header class="m-8 text-5xl border-b-4 border-primary">Basic Typescript</header>
+    <header>
+        <nav>
+            <ul class="flex bg-black text-white p-1 text-2xl">
+                <li class="m-4 underline"><a href="index.html">Basic Typescript</a></li>
+                <li class="m-4"><a href="interfaces/index.html">Interfaces</a></li>
+                <li class="m-4"><a href="generics/index.html">Generics</a></li>
+                <li class="m-4"><a href="classes/index.html">Classes</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="flex h-full">
     <nav class="w-72 mx-8">
         <ul>
-            <li class="my-8 flex justify-center">
+            <h1 class="text-3xl m-2 w-full">Basic Typescript</h1>
+            <li class="my-6 flex justify-center">
                 <button id="funcParams" class="btn btn-primary w-full">Function Parameter Types</button> 
             </li>
-            <li class="my-8 flex justify-center">
-                <button id="objectTypes" class="btn btn-primary">Object Types</button>
+            <li class="my-6 flex justify-center">
+                <button id="objectTypes" class="btn btn-primary w-full">Object Types</button>
             </li>
-            <li class="my-8 flex justify-center">
-                <button id="funcReturnTypes" class="btn btn-primary">Function Return Types</button>
+            <li class="my-6 flex justify-center">
+                <button id="funcReturnTypes" class="btn btn-primary w-full">Function Return Types</button>
             </li>
-            <li class="my-8 flex justify-center">
-                <button id="funcAsType" class="btn btn-primary">Functions As Types</button>
-            </li>
-
-            <li class="my-8 flex justify-center">
-                <button id="ArrayTupleEnum" class="btn btn-primary">Array, Tuple and Enum Types</button>
+            <li class="my-6 flex justify-center">
+                <button id="funcAsType" class="btn btn-primary w-full">Functions As Types</button>
             </li>
 
-            <li class="my-8 flex justify-center">
-                <button id="UnionLiteral" class="btn btn-primary">Union and Literal Types</button>
+            <li class="my-6 flex justify-center">
+                <button id="ArrayTupleEnum" class="btn btn-primary w-full">Array, Tuple and Enum Types</button>
             </li>
 
-            <li class="my-8 flex justify-center">
-                <button id="funcType" class="btn btn-primary">Function Types</button>
+            <li class="my-6 flex justify-center">
+                <button id="UnionLiteral" class="btn btn-primary w-full">Union and Literal Types</button>
+            </li>
+
+            <li class="my-6 flex justify-center">
+                <button id="funcType" class="btn btn-primary w-full">Function Types</button>
             </li>
         </ul>
     </nav>
-    <div id="code-example" class="ml-8 w-screen">
+    <div id="code-example" class="ml-8 w-screen bg-gray-100">
         <div id="code-card" class="card">
             <div class="card-body">
                 <h2 class="card-title"></h2>
